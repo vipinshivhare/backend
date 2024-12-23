@@ -16,6 +16,11 @@ mongoose.connect(process.env.DB_CONNECTION_STRING);
 
 app.use('/todos', todoRoutes);
 
+app.get("/home", (
+  req,res 
+ ) => {
+  res.send("Welcome to the home page");
+ } );
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
